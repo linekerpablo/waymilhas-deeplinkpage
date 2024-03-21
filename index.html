@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecionamento WayMilhas</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function getQueryParams() {
+            var params = {};
+            window.location.search.substring(1).split("&").forEach(function(part) {
+                var item = part.split("=");
+                params[item[0]] = decodeURIComponent(item[1]);
+            });
+            return params;
+        }
+
+        window.onload = function() {
+            var params = getQueryParams();
+            var deepLink = params.deepLink; // O nome do parâmetro é 'deepLink'
+            if (deepLink) {
+                window.location.href = deepLink;
+            }
+        }
+    </script>
+    <p>Se você não foi redirecionado automaticamente, <a href="#" onclick="window.onload()">clique aqui</a>.</p>
+</body>
+</html>
