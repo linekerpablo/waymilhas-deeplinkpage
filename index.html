@@ -1,27 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Redirecionamento WayMilhas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixe o App - WayMilhas</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        .download-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .column {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .store-icon {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .store-button {
+            background-image: linear-gradient(270deg, #FA540E 0%, #FB7C15 100%);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <script type="text/javascript">
-        function getQueryParams() {
-            var params = {};
-            window.location.search.substring(1).split("&").forEach(function(part) {
-                var item = part.split("=");
-                params[item[0]] = decodeURIComponent(item[1]);
-            });
-            return params;
-        }
-
-        window.onload = function() {
-            var params = getQueryParams();
-            var deepLink = params.deepLink; // O nome do parâmetro é 'deepLink'
-            if (deepLink) {
-                window.location.href = deepLink;
-            }
-        }
-    </script>
-    <p>Se você não foi redirecionado automaticamente, <a href="#" onclick="window.onload()">clique aqui</a>.</p>
+    <div class="container">
+        <h1>Baixe o App</h1>
+        <div class="download-section">
+            <div class="column">
+                <img src="https://waymilhas.com.br/wp-content/uploads/2024/07/app_store.webp" alt="App Store" class="store-icon">
+                <p>Apple Store</p>
+                <a href="https://apps.apple.com/br/app/waymilhas/id6476776617" target="_blank" class="store-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" width="16">
+                    Baixar na App Store
+                </a>
+            </div>
+            <div class="column">
+                <img src="https://waymilhas.com.br/wp-content/uploads/2024/07/play_store.webp" alt="Play Store" class="store-icon">
+                <p>PlayStore</p>
+                <a href="https://play.google.com/store/apps/details?id=com.waymilhas.app&hl=pt_BR" target="_blank" class="store-button">
+                    <img src="https://waymilhas.com.br/wp-content/uploads/2024/07/play_store.webp" alt="Play Store" width="16">
+                    Baixar na Play Store
+                </a>
+            </div>
+        </div>
+        <p style="margin-top: 30px;">Confiado por 300+ Milheiros, Viajantes e Agências de viagem</p>
+    </div>
 </body>
 </html>
